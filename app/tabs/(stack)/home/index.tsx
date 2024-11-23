@@ -7,15 +7,15 @@ const HomeScreen = () => {
     <View className='px-4 mt-10'>
       <View className='flex-col gap-2'>
         <CustomButton color={"secondary"}
-          onPress={() => router.push('/products')}
+          onPress={() => router.push('/tabs/(stack)/products')}
         >Productos</CustomButton>
 
-        <Link href="/settings" className='block w-full mt-3' asChild>
+        <Link href="/tabs/(stack)/profile" className='block w-full mt-3' asChild>
           <CustomButton color={"primary"}>Edit</CustomButton>
         </Link>
 
         <CustomButton color={"tertiary"}
-          onPress={() => router.push('/profile')}
+          onPress={() => router.push('/tabs/(stack)/settings')}
         >Productos</CustomButton>
       </View>
     </View>

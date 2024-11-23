@@ -4,6 +4,7 @@ const StackRoot = () => {
   return (
     <Stack
       screenOptions={{
+        // headerShown: false,
         headerShadowVisible: false,
         contentStyle: {
           backgroundColor: '#fff',
@@ -14,32 +15,33 @@ const StackRoot = () => {
         headerTintColor: '#000',
         headerTitleStyle: {
           fontWeight: 'bold',
-        }
+        },
       }
       }
     >
       <Stack.Screen
-        name="home/index"
+        name="tabs/(stack)/home/index"
         options={{
           title: 'Inicio',
           animation: 'slide_from_right'
         }}
+
       />
       <Stack.Screen
-        name="products/index"
+        name="tabs/products"
         options={{
           title: 'Productos'
         }}
       />
       <Stack.Screen
-        name="profile/index"
+        name="tabs/profile"
         options={{
           title: 'Perfil'
         }}
       />
 
       <Stack.Screen
-        name="settings/index"
+        name="tabs/settings"
         options={{
           title: 'Ajustes'
         }}

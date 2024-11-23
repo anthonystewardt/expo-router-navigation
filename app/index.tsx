@@ -5,7 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 
 
 const App = () => {
-  return <Redirect href="/(stack)/home" />
+  return <Redirect href="/drawer/user" />
   {/* <SafeAreaView className='px-5 mt-3'>
       <Link href="/products" className='text-4xl font-semibold dark:text-secondary-200 font-work-light'>Productos</Link>
       <Link href="/profile" className='text-4xl font-semibold dark:text-secondary-200 font-work-light'>Profile</Link>
