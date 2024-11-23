@@ -1,10 +1,14 @@
 import { products } from '@/store/products.store'
-import { useLocalSearchParams } from 'expo-router'
+import { useLocalSearchParams, useNavigation } from 'expo-router'
+import { useEffect } from 'react'
 import { View, Text } from 'react-native'
 const ProductById = () => {
   const { id } = useLocalSearchParams()
+  const navigation = useNavigation()
 
   const product = products.find((product) => product.id === id)
+
+
 
   if (!product) {
     return (
@@ -13,6 +17,15 @@ const ProductById = () => {
       </View>
     )
   }
+
+  useEffect(() => {
+    navigation.setOptions({
+      title: product.title || 'Producto',
+    })
+  }, [product])
+
+
+
 
   return (
     <View className='px-4'>

@@ -12,7 +12,7 @@ const DrawerLayout = () => {
       screenOptions={{
         drawerActiveTintColor: 'indigo',
         drawerInactiveTintColor: 'gray',
-        headerShown: false,
+
         // headerTitle: 'Drawer Layout',
         headerTitleAlign: 'center',
         headerStyle: {
@@ -22,11 +22,12 @@ const DrawerLayout = () => {
       }}
     >
       <Drawer.Screen
-        name="tabs" // This is the name of the page and must match the url from root
+        name="(tabs)" // This is the name of the page and must match the url from root
         options={{
           drawerLabel: 'tabs + stack',
           title: 'Tabs + Stack',
           drawerIcon: ({ color, size }) => <Ionicons size={size} name="home-outline" color={color} />,
+          headerShown: false,
         }}
       />
       <Drawer.Screen
