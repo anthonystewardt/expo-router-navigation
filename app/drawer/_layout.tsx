@@ -10,19 +10,25 @@ const DrawerLayout = () => {
     <Drawer
       drawerContent={CustomDrawer}
       screenOptions={{
-
         drawerActiveTintColor: 'indigo',
         drawerInactiveTintColor: 'gray',
-        headerShown: true,
+        headerShown: false,
         // headerTitle: 'Drawer Layout',
         headerTitleAlign: 'center',
         headerStyle: {
           backgroundColor: 'transparent',
         },
         headerShadowVisible: false,
-
       }}
     >
+      <Drawer.Screen
+        name="tabs" // This is the name of the page and must match the url from root
+        options={{
+          drawerLabel: 'tabs + stack',
+          title: 'Tabs + Stack',
+          drawerIcon: ({ color, size }) => <Ionicons size={size} name="home-outline" color={color} />,
+        }}
+      />
       <Drawer.Screen
         name="billing/index" // This is the name of the page and must match the url from root
         options={{
@@ -39,6 +45,7 @@ const DrawerLayout = () => {
           drawerIcon: ({ color, size }) => <Ionicons size={size} name="person-add" color={color} />,
         }}
       />
+
     </Drawer>
   )
 }

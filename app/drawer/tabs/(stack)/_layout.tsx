@@ -20,7 +20,7 @@ const StackRoot = () => {
       }
     >
       <Stack.Screen
-        name="tabs/(stack)/home/index"
+        name="drawer/tabs/(stack)/home"
         options={{
           title: 'Inicio',
           animation: 'slide_from_right'
@@ -28,20 +28,20 @@ const StackRoot = () => {
 
       />
       <Stack.Screen
-        name="tabs/products"
+        name="drawer/tabs/(stack)/products"
         options={{
           title: 'Productos'
         }}
       />
       <Stack.Screen
-        name="tabs/profile"
+        name="drawer/tabs/(stack)/profile"
         options={{
           title: 'Perfil'
         }}
       />
 
       <Stack.Screen
-        name="tabs/settings"
+        name="drawer/tabs/(stack)/settings"
         options={{
           title: 'Ajustes'
         }}
